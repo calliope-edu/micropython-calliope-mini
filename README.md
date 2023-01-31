@@ -1,9 +1,9 @@
-MicroPython for the BBC micro:bit
+MicroPython for the calliope mini
 =================================
 
-This is the source code for MicroPython running on the BBC micro:bit!
+This is the source code for MicroPython running on the calliope mini!
 
-To get involved with the micro:bit community join the Slack channel by signing up here:
+To get involved with the calliope mini community join the Slack channel by signing up here:
 https://tech.microbit.org/get-involved/where-to-find/
 
 Various things are in this repository, including:
