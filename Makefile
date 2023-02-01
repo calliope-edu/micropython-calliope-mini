@@ -1,6 +1,6 @@
 ECHO = @echo
 
-HEX_SRC = build/bbc-microbit-classic-gcc-nosd/source/microbit-micropython.hex
+HEX_SRC = build/calliope-mini-classic-gcc-nosd/source/microbit-micropython.hex
 HEX_FINAL = build/firmware.hex
 MBIT_VER_FILE = inc/genhdr/microbitversion.h
 VER_ADDR_FILE = build/veraddr.txt
