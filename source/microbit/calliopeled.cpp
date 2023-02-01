@@ -68,19 +68,19 @@ mp_obj_t calliope_led_get_red() {
     mp_obj_t obj = mp_obj_new_int(colors[0]);
     return obj;
 }
-MP_DEFINE_CONST_FUN_OBJ_1(calliope_led_get_red_obj, calliope_led_get_red);
+MP_DEFINE_CONST_FUN_OBJ_1(calliope_led_get_red_obj, (mp_fun_1_t)calliope_led_get_red);
 
 mp_obj_t calliope_led_get_green() {
     mp_obj_t obj = mp_obj_new_int(colors[1]);
     return obj;
 }
-MP_DEFINE_CONST_FUN_OBJ_1(calliope_led_get_green_obj, calliope_led_get_green);
+MP_DEFINE_CONST_FUN_OBJ_1(calliope_led_get_green_obj, (mp_fun_1_t)calliope_led_get_green);
 
 mp_obj_t calliope_led_get_blue() {
 	mp_obj_t obj = mp_obj_new_int(colors[2]);
     return obj;
 }
-MP_DEFINE_CONST_FUN_OBJ_1(calliope_led_get_blue_obj, calliope_led_get_blue);
+MP_DEFINE_CONST_FUN_OBJ_1(calliope_led_get_blue_obj, (mp_fun_1_t)calliope_led_get_blue);
 
 mp_obj_t calliope_led_get_colors(mp_obj_t self_in) {
 	mp_obj_tuple_t *tuple = (mp_obj_tuple_t *)mp_obj_new_tuple(3, NULL);
