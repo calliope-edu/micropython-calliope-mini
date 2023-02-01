@@ -43,5 +43,5 @@ jobs:
       - name: Upload hex file
         uses: actions/upload-artifact@v1
         with:
-          name: microbitv1-micropython-${{ steps.date.outputs.date }}-${{ github.sha }}.hex
+          name: calliopemini-micropython-${{ steps.date.outputs.date }}-${{ github.sha }}.hex
           path: build/firmware.hex
