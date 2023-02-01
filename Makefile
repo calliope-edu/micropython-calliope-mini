@@ -12,14 +12,14 @@ FORCE:
 .PHONY: FORCE
 
 $(HEX_FINAL): yotta $(VER_ADDR_FILE)
-	tools/adduicr.py $(HEX_SRC) 0x$$(cat $(VER_ADDR_FILE)) -o $(HEX_FINAL)
+	py -3 tools/adduicr.py $(HEX_SRC) 0x$$(cat $(VER_ADDR_FILE)) -o $(HEX_FINAL)
 	@arm-none-eabi-size $(HEX_SRC:.hex=)
 
 yotta: $(MBIT_VER_FILE)
 	@yotta build
 
 $(MBIT_VER_FILE): FORCE
-	python tools/makeversionhdr.py $(MBIT_VER_FILE)
+	py -3 tools/makeversionhdr.py $(MBIT_VER_FILE)
 
 $(VER_ADDR_FILE): yotta
 	@arm-none-eabi-objdump -x $(HEX_SRC:.hex=) | grep microbit_version_string | cut -f 1 -d' ' > $(VER_ADDR_FILE)
