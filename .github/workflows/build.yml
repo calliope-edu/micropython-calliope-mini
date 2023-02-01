@@ -16,7 +16,7 @@ jobs:
       - name: Install Python 3.6
         uses: actions/setup-python@v3
         with:
-          python-version: 3.6
+          python-version: '3.6'
       - name: Install GNU Arm Embedded Toolchain (arm-none-eabi-gcc)
         uses: carlosperate/arm-none-eabi-gcc-action@v1
         with:
