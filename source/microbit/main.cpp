@@ -170,7 +170,7 @@ int main(void) {
         microbit_display_init();
         microbit_filesystem_init();
         microbit_pin_init();
-        microbit_compass_init();
+        // microbit_compass_init();
         pwm_init();
         MP_STATE_PORT(radio_buf) = NULL;
 
