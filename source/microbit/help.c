@@ -64,7 +64,7 @@ typedef struct _mp_doc_t {
 } mp_doc_t;
 
 STATIC const mp_doc_t help_table_types[] = {
-    {&microbit_accelerometer_type, "MicroBitAccelerometer type\n"},
+    // {&microbit_accelerometer_type, "MicroBitAccelerometer type\n"},
 };
 
 // Consistency between messages and minimal jargon improves help text.
@@ -76,10 +76,10 @@ STATIC const mp_doc_t help_table_instances[] = {
     {&microbit_running_time_obj, "Return running_time() in milliseconds since micro:bit's last reset.\n"},
     {&microbit_temperature_obj, "Return micro:bit's temperature in degrees Celcius.\n"},
     // Accelerometer 3D orientation
-    {&microbit_accelerometer_obj, "Detect micro:bit's movement in 3D.\nIt measures tilt (X and Y) and up-down (Z) motion.\n"},
-    {&microbit_accelerometer_get_x_obj, "Return micro:bit's tilt (X acceleration) in milli-g's.\n"},
-    {&microbit_accelerometer_get_y_obj, "Return micro:bit's tilt (Y acceleration) in milli-g's.\n"},
-    {&microbit_accelerometer_get_z_obj, "Return micro:bit's up-down motion (Z acceleration) in milli-g's.\nZ is a positive number when moving up. Moving down, Z is a negative number.\n"},
+    // {&microbit_accelerometer_obj, "Detect micro:bit's movement in 3D.\nIt measures tilt (X and Y) and up-down (Z) motion.\n"},
+    // {&microbit_accelerometer_get_x_obj, "Return micro:bit's tilt (X acceleration) in milli-g's.\n"},
+    // {&microbit_accelerometer_get_y_obj, "Return micro:bit's tilt (Y acceleration) in milli-g's.\n"},
+    // {&microbit_accelerometer_get_z_obj, "Return micro:bit's up-down motion (Z acceleration) in milli-g's.\nZ is a positive number when moving up. Moving down, Z is a negative number.\n"},
     // Pushbutton
     {&microbit_button_a_obj, "micro:bit's 'A' button. When button is pressed down, is_pressed() is True.\n"},
     {&microbit_button_b_obj, "micro:bit's 'B' button. When button is pressed down, is_pressed() is True.\n"},
@@ -87,15 +87,15 @@ STATIC const mp_doc_t help_table_instances[] = {
     {&microbit_button_was_pressed_obj, "Use was_pressed() to learn if the button was pressed since the last time\nwas_pressed() was called. Returns True or False.\n"},
     {&microbit_button_get_presses_obj, "Use get_presses() to get the running total of button presses, and also\nreset this counter to zero.\n"},
     // Compass 3D direction heading
-    {&microbit_compass_heading_obj, "Gives a compass heading between 0-360 with 0 as north.\n"},
-    {&microbit_compass_obj, "Use micro:bit's compass to detect the direction it is heading in.\nThe compass can detect magnetic fields.\nIt uses the Earth's magnetic field to detect direction.\n"},
-    {&microbit_compass_is_calibrated_obj, "If micro:bit's compass is_calibrated() and adjusted for accuracy, return True.\nIf compass hasn't been adjusted for accuracy, return False.\n"},
-    {&microbit_compass_calibrate_obj, "If micro:bit is confused, calibrate() the compass to adjust the its accuracy.\nIt will ask you to rotate the device to draw a circle on the display.\n"},
-    {&microbit_compass_clear_calibration_obj, "Reset micro:bit's compass using clear_calibration() command.\nRun calibrate() to improve accuracy.\n"},
-    {&microbit_compass_get_x_obj, "Return magnetic field detected along micro:bit's X axis.\nUsually, the compass returns the earth's magnetic field in micro-Tesla units.\nUnless...a strong magnet is nearby!\n"},
-    {&microbit_compass_get_y_obj, "Return magnetic field detected along micro:bit's Y axis.\nUsually, the compass returns the earth's magnetic field in micro-Tesla units.\nUnless...a strong magnet is nearby!\n"},
-    {&microbit_compass_get_z_obj, "Return magnetic field detected along micro:bit's Z axis.\nUsually, the compass returns the earth's magnetic field in micro-Tesla units.\nUnless...a strong magnet is nearby!\n"},
-    {&microbit_compass_get_field_strength_obj, "Return strength of magnetic field around micro:bit.\n"},
+    // {&microbit_compass_heading_obj, "Gives a compass heading between 0-360 with 0 as north.\n"},
+    // {&microbit_compass_obj, "Use micro:bit's compass to detect the direction it is heading in.\nThe compass can detect magnetic fields.\nIt uses the Earth's magnetic field to detect direction.\n"},
+    // {&microbit_compass_is_calibrated_obj, "If micro:bit's compass is_calibrated() and adjusted for accuracy, return True.\nIf compass hasn't been adjusted for accuracy, return False.\n"},
+    // {&microbit_compass_calibrate_obj, "If micro:bit is confused, calibrate() the compass to adjust the its accuracy.\nIt will ask you to rotate the device to draw a circle on the display.\n"},
+    // {&microbit_compass_clear_calibration_obj, "Reset micro:bit's compass using clear_calibration() command.\nRun calibrate() to improve accuracy.\n"},
+    // {&microbit_compass_get_x_obj, "Return magnetic field detected along micro:bit's X axis.\nUsually, the compass returns the earth's magnetic field in micro-Tesla units.\nUnless...a strong magnet is nearby!\n"},
+    // {&microbit_compass_get_y_obj, "Return magnetic field detected along micro:bit's Y axis.\nUsually, the compass returns the earth's magnetic field in micro-Tesla units.\nUnless...a strong magnet is nearby!\n"},
+    // {&microbit_compass_get_z_obj, "Return magnetic field detected along micro:bit's Z axis.\nUsually, the compass returns the earth's magnetic field in micro-Tesla units.\nUnless...a strong magnet is nearby!\n"},
+   // {&microbit_compass_get_field_strength_obj, "Return strength of magnetic field around micro:bit.\n"},
     // Display 5x5 LED grid
     {&microbit_display_obj, "micro:bit's 5x5 LED display.\n"},
     {&microbit_display_show_obj, "Use show(x) to print the string or images 'x' to the display. Try show('Hi!').\nUse show(s, i) to show string 's', one character at a time with a delay of\n'i' milliseconds.\n"},

@@ -215,7 +215,7 @@ void microbit_display_scroll(microbit_display_obj_t *display, const char* str);
 extern volatile bool compass_up_to_date;
 extern volatile bool compass_updating;
 
-extern const struct _microbit_compass_obj_t microbit_compass_obj;
+// extern const struct _microbit_compass_obj_t microbit_compass_obj;
 
 void microbit_compass_init(void);
 
@@ -226,7 +226,7 @@ extern volatile bool accelerometer_up_to_date;
 extern volatile bool accelerometer_updating;
 
 extern const mp_obj_type_t microbit_accelerometer_type;
-extern const struct _microbit_accelerometer_obj_t microbit_accelerometer_obj;
+// extern const struct _microbit_accelerometer_obj_t microbit_accelerometer_obj;
 
 //void microbit_accelerometer_event_handler(const MicroBitEvent *evt);
 
