@@ -29,6 +29,7 @@
 #include "MicroBitDisplay.h"
 #include "MicroBitCompass.h"
 #include "MicroBitCompassCalibrator.h"
+#include "lib/bmx055.h"
 
 class MicroPythonI2C : public MicroBitI2C {
     public:
