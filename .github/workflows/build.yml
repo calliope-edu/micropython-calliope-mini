@@ -34,7 +34,7 @@ jobs:
           yotta --version
       - name: Set up the Yotta target from GitHub
         run: |
-          yotta target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-university/yotta-target-bbc-microbit-classic-gcc-nosd
+          # yotta target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-university/yotta-target-bbc-microbit-classic-gcc-nosd
           yotta up
       - run: make qstrs
       - run: git diff
@@ -45,5 +45,5 @@ jobs:
       - name: Upload hex file
         uses: actions/upload-artifact@v1
         with:
-          name: microbitv1-micropython-${{ steps.date.outputs.date }}-${{ github.sha }}.hex
+          name: calliopemini-micropython-${{ steps.date.outputs.date }}-${{ github.sha }}.hex
           path: build/firmware.hex
