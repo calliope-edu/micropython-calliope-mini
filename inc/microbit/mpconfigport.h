@@ -120,7 +120,7 @@ extern const struct _mp_obj_module_t utime_module;
 extern const struct _mp_obj_module_t machine_module;
 
 #define MICROPY_PORT_BUILTIN_MODULES \
-    { MP_ROM_QSTR(MP_QSTR_microbit), MP_ROM_PTR(&microbit_module) }, \
+    { MP_ROM_QSTR(MP_QSTR_calliopemini), MP_ROM_PTR(&microbit_module) }, \
     { MP_ROM_QSTR(MP_QSTR_music), MP_ROM_PTR(&music_module) }, \
     { MP_ROM_QSTR(MP_QSTR_this), MP_ROM_PTR(&this_module) }, \
     { MP_ROM_QSTR(MP_QSTR_antigravity), MP_ROM_PTR(&antigravity_module) }, \

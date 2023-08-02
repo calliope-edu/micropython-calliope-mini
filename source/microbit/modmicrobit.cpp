@@ -118,7 +118,7 @@ STATIC mp_obj_t microbit_scale(size_t n_args, const mp_obj_t *pos_args, mp_map_t
 STATIC MP_DEFINE_CONST_FUN_OBJ_KW(microbit_scale_obj, 0, microbit_scale);
 
 STATIC const mp_map_elem_t microbit_module_globals_table[] = {
-    { MP_OBJ_NEW_QSTR(MP_QSTR___name__), MP_OBJ_NEW_QSTR(MP_QSTR_microbit) },
+    { MP_OBJ_NEW_QSTR(MP_QSTR___name__), MP_OBJ_NEW_QSTR(MP_QSTR_calliopemini) },
 
     { MP_OBJ_NEW_QSTR(MP_QSTR_Image), (mp_obj_t)&microbit_image_type },
 
