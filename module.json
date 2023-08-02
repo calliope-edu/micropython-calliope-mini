@@ -7,7 +7,7 @@
   "author": "Damien P George <damien.p.george@gmail.com>",
   "homepage": "http://micropython.org",
   "dependencies":{
-    "microbit-dal": "calliope-mini/microbit-dal#v2.1.1-calliope"
+    "microbit-dal": "calliope-mini/microbit-dal#v2.1.1-calliope-2"
   },
   "extraIncludes":[
     "inc",
