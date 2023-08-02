@@ -1,10 +1,7 @@
-MicroPython for the BBC micro:bit
+MicroPython for the calliope mini
 =================================
 
-This is the source code for MicroPython running on the BBC micro:bit!
-
-To get involved with the micro:bit community join the Slack channel by signing up here:
-https://tech.microbit.org/get-involved/where-to-find/
+This is the source code for MicroPython running on the calliope mini!
 
 Various things are in this repository, including:
 - Source code in source/ and inc/ directories.
@@ -28,13 +25,6 @@ Once all packages are installed run
 The move to the created directory and use yotta and the provided Makefile to build.
 You might need need an Arm Mbed account to complete some of the yotta commands,
 if so, you could be prompted to create one as a part of the process.
-
-- Use target [bbc-microbit-classic-gcc-nosd](https://github.com/lancaster-university/yotta-target-bbc-microbit-classic-gcc-nosd)
-from GitHub (the yotta registry is deprecated as of 2021):
-
-  ```
-  yotta target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-university/yotta-target-bbc-microbit-classic-gcc-nosd
-  ```
 
 - Run yotta update to fetch remote assets:
 

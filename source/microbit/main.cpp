@@ -38,12 +38,12 @@ void reset_button_handler(uint32_t data, gpio_irq_event event) {
 void microbit_ticker(void) {
     // Update compass if it is calibrating, but not if it is still
     // updating as compass.idleTick() is not reentrant.
-    if (ubit_compass->isCalibrating() && !compass_updating) {
-        ubit_compass->idleTick();
-    }
+    // if (ubit_compass->isCalibrating() && !compass_updating) {
+    //     ubit_compass->idleTick();
+    // }
 
-    compass_up_to_date = false;
-    accelerometer_up_to_date = false;
+    // compass_up_to_date = false;
+    // accelerometer_up_to_date = false;
 
     // Update buttons and pins with touch.
     microbit_button_tick();
@@ -170,7 +170,7 @@ int main(void) {
         microbit_display_init();
         microbit_filesystem_init();
         microbit_pin_init();
-        microbit_compass_init();
+        // microbit_compass_init();
         pwm_init();
         MP_STATE_PORT(radio_buf) = NULL;
 

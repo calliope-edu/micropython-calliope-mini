@@ -1,6 +1,6 @@
 ECHO = @echo
 
-HEX_SRC = build/bbc-microbit-classic-gcc-nosd/source/microbit-micropython.hex
+HEX_SRC = build/calliope-mini-classic-gcc-nosd/source/microbit-micropython.hex
 HEX_FINAL = build/firmware.hex
 MBIT_VER_FILE = inc/genhdr/microbitversion.h
 VER_ADDR_FILE = build/veraddr.txt
@@ -12,7 +12,7 @@ FORCE:
 .PHONY: FORCE
 
 $(HEX_FINAL): yotta $(VER_ADDR_FILE)
-	tools/adduicr.py $(HEX_SRC) 0x$$(cat $(VER_ADDR_FILE)) -o $(HEX_FINAL)
+	python tools/adduicr.py $(HEX_SRC) 0x$$(cat $(VER_ADDR_FILE)) -o $(HEX_FINAL)
 	@arm-none-eabi-size $(HEX_SRC:.hex=)
 
 yotta: $(MBIT_VER_FILE)

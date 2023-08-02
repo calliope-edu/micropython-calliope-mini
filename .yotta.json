@@ -1,0 +1,5 @@
+{
+  "build": {
+    "target": "calliope-mini-classic-gcc-nosd,https://github.com/calliope-mini/target-calliope-mini-classic-gcc#nosd"
+  }
+}

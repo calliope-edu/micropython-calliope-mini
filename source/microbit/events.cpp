@@ -29,7 +29,7 @@
 #include "microbit/modmicrobit.h"
 
 extern "C" {
-    extern void microbit_accelerometer_event_handler(const MicroBitEvent*);
+    // extern void microbit_accelerometer_event_handler(const MicroBitEvent*);
 }
 
 class MicroPythonEventHandler : public EventModel {
@@ -51,7 +51,7 @@ int MicroPythonEventHandler::send(MicroBitEvent evt) {
     // Dispatch the event to the relevant component
     switch (evt.source) {
         case MICROBIT_ID_GESTURE:
-            microbit_accelerometer_event_handler(&evt);
+            // microbit_accelerometer_event_handler(&evt);
             break;
 
         case MICROBIT_ID_COMPASS:
