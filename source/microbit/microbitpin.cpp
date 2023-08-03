@@ -34,30 +34,34 @@ extern "C" {
 #include "lib/pwm.h"
 #include "microbit/modmicrobit.h"
 
-const microbit_pin_obj_t microbit_p0_obj = {{&microbit_touch_pin_type}, 0, MICROBIT_PIN_P0, MODE_UNUSED};
+const microbit_pin_obj_t microbit_p0_obj = {{&microbit_dig_pin_type}, 0, MICROBIT_PIN_P0, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p1_obj = {{&microbit_touch_pin_type}, 1, MICROBIT_PIN_P1, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p2_obj = {{&microbit_touch_pin_type}, 2, MICROBIT_PIN_P2, MODE_UNUSED};
-const microbit_pin_obj_t microbit_p3_obj = {{&microbit_ad_pin_type},   3,  MICROBIT_PIN_P3, MODE_DISPLAY};
+const microbit_pin_obj_t microbit_p3_obj = {{&microbit_dig_pin_type},   3,  MICROBIT_PIN_P3, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p4_obj = {{&microbit_ad_pin_type},   4,  MICROBIT_PIN_P4, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p5_obj = {{&microbit_ad_pin_type},   5,  MICROBIT_PIN_P5, MODE_DISPLAY};
-const microbit_pin_obj_t microbit_p6_obj = {{&microbit_dig_pin_type},  6,  MICROBIT_PIN_P6, MODE_DISPLAY};
+const microbit_pin_obj_t microbit_p6_obj = {{&microbit_ad_pin_type},  6,  MICROBIT_PIN_P6, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p7_obj = {{&microbit_dig_pin_type},  7,  MICROBIT_PIN_P7, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p8_obj = {{&microbit_dig_pin_type},  8,  MICROBIT_PIN_P8, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p9_obj = {{&microbit_dig_pin_type},  9,  MICROBIT_PIN_P9, MODE_DISPLAY};
-const microbit_pin_obj_t microbit_p10_obj = {{&microbit_ad_pin_type},  10, MICROBIT_PIN_P10, MODE_DISPLAY};
+const microbit_pin_obj_t microbit_p10_obj = {{&microbit_dig_pin_type},  10, MICROBIT_PIN_P10, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p11_obj = {{&microbit_dig_pin_type}, 11, MICROBIT_PIN_P11, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p12_obj = {{&microbit_dig_pin_type}, 12, MICROBIT_PIN_P12, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p13_obj = {{&microbit_dig_pin_type}, 13, MICROBIT_PIN_P13, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p14_obj = {{&microbit_dig_pin_type}, 14, MICROBIT_PIN_P14, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p15_obj = {{&microbit_dig_pin_type}, 15, MICROBIT_PIN_P15, MODE_UNUSED};
-const microbit_pin_obj_t microbit_p16_obj = {{&microbit_dig_pin_type}, 16, MICROBIT_PIN_P16, MODE_UNUSED};
-const microbit_pin_obj_t microbit_p17_obj = {{&microbit_dig_pin_type}, 17, MICROBIT_PIN_P17, MODE_UNUSED};
+const microbit_pin_obj_t microbit_p16_obj = {{&microbit_ad_pin_type}, 16, MICROBIT_PIN_P16, MODE_UNUSED};
+const microbit_pin_obj_t microbit_p17_obj = {{&microbit_ad_pin_type}, 17, MICROBIT_PIN_P17, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p19_obj = {{&microbit_dig_pin_type}, 19, MICROBIT_PIN_P19, MODE_I2C};
 const microbit_pin_obj_t microbit_p20_obj = {{&microbit_dig_pin_type}, 20, MICROBIT_PIN_P20, MODE_I2C};
 
 const microbit_pin_obj_t microbit_btna_obj = {{&microbit_dig_pin_type},  21,  MICROBIT_PIN_BTNA, MODE_BUTTON};
 const microbit_pin_obj_t microbit_btnb_obj = {{&microbit_dig_pin_type},  22,  MICROBIT_PIN_BTNB, MODE_BUTTON};
 const microbit_pin_obj_t microbit_rgb_obj = {{&microbit_dig_pin_type}, 23, MICROBIT_PIN_RGB, MODE_UNUSED};
+const microbit_pin_obj_t microbit_mic_obj = {{&microbit_ad_pin_type}, 24, MICROBIT_PIN_MIC, MODE_UNUSED};
+const microbit_pin_obj_t microbit_m_sleep_obj = {{&microbit_dig_pin_type}, 25, MICROBIT_PIN_M_SLEEP, MODE_UNUSED};
+const microbit_pin_obj_t microbit_m_in1_obj = {{&microbit_dig_pin_type}, 26, MICROBIT_PIN_M_IN1, MODE_UNUSED};
+const microbit_pin_obj_t microbit_m_in2_obj = {{&microbit_dig_pin_type}, 27, MICROBIT_PIN_M_IN2, MODE_UNUSED};
 
 static mp_obj_t microbit_pin_get_mode_func(mp_obj_t self_in) {
     microbit_pin_obj_t *self = (microbit_pin_obj_t*)self_in;
