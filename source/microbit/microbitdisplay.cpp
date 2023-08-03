@@ -523,12 +523,15 @@ MP_DEFINE_CONST_FUN_OBJ_KW(microbit_display_scroll_obj, 1, microbit_display_scro
 mp_obj_t microbit_display_on_func(mp_obj_t obj) {
     microbit_display_obj_t *self = (microbit_display_obj_t*)obj;
     /* Try to reclaim the pins we need */
-    microbit_obj_pin_acquire(&microbit_p3_obj, microbit_pin_mode_display);
     microbit_obj_pin_acquire(&microbit_p4_obj, microbit_pin_mode_display);
+    microbit_obj_pin_acquire(&microbit_p5_obj, microbit_pin_mode_display);
     microbit_obj_pin_acquire(&microbit_p6_obj, microbit_pin_mode_display);
     microbit_obj_pin_acquire(&microbit_p7_obj, microbit_pin_mode_display);
+    microbit_obj_pin_acquire(&microbit_p8_obj, microbit_pin_mode_display);
     microbit_obj_pin_acquire(&microbit_p9_obj, microbit_pin_mode_display);
     microbit_obj_pin_acquire(&microbit_p10_obj, microbit_pin_mode_display);
+    microbit_obj_pin_acquire(&microbit_p11_obj, microbit_pin_mode_display);
+    microbit_obj_pin_acquire(&microbit_p12_obj, microbit_pin_mode_display);
     /* Make sure all pins are in the correct state */
     microbit_display_init();
     /* Re-enable the display loop.  This will resume any animations in
@@ -549,12 +552,15 @@ mp_obj_t microbit_display_off_func(mp_obj_t obj) {
      * GPIO. */
     nrf_gpio_pins_clear(ROW_PINS_MASK);
     /* Free pins for other uses */
-    microbit_obj_pin_free(&microbit_p3_obj);
     microbit_obj_pin_free(&microbit_p4_obj);
+    microbit_obj_pin_free(&microbit_p5_obj);
     microbit_obj_pin_free(&microbit_p6_obj);
     microbit_obj_pin_free(&microbit_p7_obj);
+    microbit_obj_pin_free(&microbit_p8_obj);
     microbit_obj_pin_free(&microbit_p9_obj);
     microbit_obj_pin_free(&microbit_p10_obj);
+    microbit_obj_pin_free(&microbit_p11_obj);
+    microbit_obj_pin_free(&microbit_p12_obj);
     return mp_const_none;
 }
 MP_DEFINE_CONST_FUN_OBJ_1(microbit_display_off_obj, microbit_display_off_func);

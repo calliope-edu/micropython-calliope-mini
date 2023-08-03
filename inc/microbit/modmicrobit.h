@@ -95,6 +95,8 @@ extern const struct _microbit_pin_obj_t microbit_p15_obj;
 extern const struct _microbit_pin_obj_t microbit_p16_obj;
 extern const struct _microbit_pin_obj_t microbit_p19_obj;
 extern const struct _microbit_pin_obj_t microbit_p20_obj;
+extern const struct _microbit_pin_obj_t microbit_btna_obj;
+extern const struct _microbit_pin_obj_t microbit_btnb_obj;
 
 void microbit_pin_init(void);
 

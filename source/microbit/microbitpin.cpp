@@ -39,13 +39,13 @@ const microbit_pin_obj_t microbit_p1_obj = {{&microbit_touch_pin_type}, 1, MICRO
 const microbit_pin_obj_t microbit_p2_obj = {{&microbit_touch_pin_type}, 2, MICROBIT_PIN_P2, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p3_obj = {{&microbit_ad_pin_type},   3,  MICROBIT_PIN_P3, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p4_obj = {{&microbit_ad_pin_type},   4,  MICROBIT_PIN_P4, MODE_DISPLAY};
-const microbit_pin_obj_t microbit_p5_obj = {{&microbit_dig_pin_type},  5,  MICROBIT_PIN_P5, MODE_BUTTON};
+const microbit_pin_obj_t microbit_p5_obj = {{&microbit_ad_pin_type},   5,  MICROBIT_PIN_P5, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p6_obj = {{&microbit_dig_pin_type},  6,  MICROBIT_PIN_P6, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p7_obj = {{&microbit_dig_pin_type},  7,  MICROBIT_PIN_P7, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p8_obj = {{&microbit_dig_pin_type},  8,  MICROBIT_PIN_P8, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p9_obj = {{&microbit_dig_pin_type},  9,  MICROBIT_PIN_P9, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p10_obj = {{&microbit_ad_pin_type},  10, MICROBIT_PIN_P10, MODE_DISPLAY};
-const microbit_pin_obj_t microbit_p11_obj = {{&microbit_dig_pin_type}, 11, MICROBIT_PIN_P11, MODE_BUTTON};
+const microbit_pin_obj_t microbit_p11_obj = {{&microbit_dig_pin_type}, 11, MICROBIT_PIN_P11, MODE_DISPLAY};
 const microbit_pin_obj_t microbit_p12_obj = {{&microbit_dig_pin_type}, 12, MICROBIT_PIN_P12, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p13_obj = {{&microbit_dig_pin_type}, 13, MICROBIT_PIN_P13, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p14_obj = {{&microbit_dig_pin_type}, 14, MICROBIT_PIN_P14, MODE_UNUSED};
@@ -54,6 +54,8 @@ const microbit_pin_obj_t microbit_p16_obj = {{&microbit_dig_pin_type}, 16, MICRO
 const microbit_pin_obj_t microbit_p19_obj = {{&microbit_dig_pin_type}, 19, MICROBIT_PIN_P19, MODE_I2C};
 const microbit_pin_obj_t microbit_p20_obj = {{&microbit_dig_pin_type}, 20, MICROBIT_PIN_P20, MODE_I2C};
 
+const microbit_pin_obj_t microbit_btna_obj = {{&microbit_dig_pin_type},  21,  MICROBIT_PIN_BTNA, MODE_BUTTON};
+const microbit_pin_obj_t microbit_btnb_obj = {{&microbit_dig_pin_type},  22,  MICROBIT_PIN_BTNB, MODE_BUTTON};
 
 static mp_obj_t microbit_pin_get_mode_func(mp_obj_t self_in) {
     microbit_pin_obj_t *self = (microbit_pin_obj_t*)self_in;
@@ -297,8 +299,8 @@ const mp_obj_type_t microbit_touch_pin_type = {
 
 
 void microbit_pin_init(void) {
-    nrf_gpio_cfg_input(microbit_p5_obj.name, NRF_GPIO_PIN_PULLUP);
-    nrf_gpio_cfg_input(microbit_p11_obj.name, NRF_GPIO_PIN_PULLUP);
+    nrf_gpio_cfg_input(microbit_btna_obj.name, NRF_GPIO_PIN_PULLUP);
+    nrf_gpio_cfg_input(microbit_btnb_obj.name, NRF_GPIO_PIN_PULLUP);
 }
 
 

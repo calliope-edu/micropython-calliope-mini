@@ -94,13 +94,13 @@ STATIC const mp_obj_type_t microbit_button_type = {
 
 const microbit_button_obj_t microbit_button_a_obj = {
     {&microbit_button_type},
-    .pin = &microbit_p5_obj,
+    .pin = &microbit_btna_obj,
     .index = 0,
 };
 
 const microbit_button_obj_t microbit_button_b_obj = {
     {&microbit_button_type},
-    .pin = &microbit_p11_obj,
+    .pin = &microbit_btnb_obj,
     .index = 1,
 };
 
