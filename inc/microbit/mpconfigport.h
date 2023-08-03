@@ -165,7 +165,7 @@ void mp_hal_stdout_tx_strn_cooked(const char *str, mp_uint_t len);
 #include <alloca.h>
 
 #define MICROBIT_RELEASE "1.1.1"
-#define MICROBIT_BOARD_NAME "micro:bit"
+#define MICROBIT_BOARD_NAME "Calliope mini"
 #define MICROPY_HW_BOARD_NAME MICROBIT_BOARD_NAME " v" MICROBIT_RELEASE
 #define MICROPY_HW_MCU_NAME "nRF51822"
 

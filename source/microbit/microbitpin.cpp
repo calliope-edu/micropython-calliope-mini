@@ -57,6 +57,7 @@ const microbit_pin_obj_t microbit_p20_obj = {{&microbit_dig_pin_type}, 20, MICRO
 
 const microbit_pin_obj_t microbit_btna_obj = {{&microbit_dig_pin_type},  21,  MICROBIT_PIN_BTNA, MODE_BUTTON};
 const microbit_pin_obj_t microbit_btnb_obj = {{&microbit_dig_pin_type},  22,  MICROBIT_PIN_BTNB, MODE_BUTTON};
+const microbit_pin_obj_t microbit_rgb_obj = {{&microbit_dig_pin_type}, 23, MICROBIT_PIN_RGB, MODE_UNUSED};
 
 static mp_obj_t microbit_pin_get_mode_func(mp_obj_t self_in) {
     microbit_pin_obj_t *self = (microbit_pin_obj_t*)self_in;

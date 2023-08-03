@@ -161,6 +161,9 @@ STATIC const mp_map_elem_t microbit_module_globals_table[] = {
     { MP_OBJ_NEW_QSTR(MP_QSTR_pin17), (mp_obj_t)&microbit_p17_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_pin19), (mp_obj_t)&microbit_p19_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_pin20), (mp_obj_t)&microbit_p20_obj },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_pin_btnA), (mp_obj_t)&microbit_btna_obj },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_pin_btnB), (mp_obj_t)&microbit_btnb_obj },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_pin_RGB), (mp_obj_t)&microbit_rgb_obj },
 };
 
 STATIC MP_DEFINE_CONST_DICT(microbit_module_globals, microbit_module_globals_table);
