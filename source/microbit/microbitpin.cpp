@@ -51,6 +51,7 @@ const microbit_pin_obj_t microbit_p13_obj = {{&microbit_dig_pin_type}, 13, MICRO
 const microbit_pin_obj_t microbit_p14_obj = {{&microbit_dig_pin_type}, 14, MICROBIT_PIN_P14, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p15_obj = {{&microbit_dig_pin_type}, 15, MICROBIT_PIN_P15, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p16_obj = {{&microbit_dig_pin_type}, 16, MICROBIT_PIN_P16, MODE_UNUSED};
+const microbit_pin_obj_t microbit_p17_obj = {{&microbit_dig_pin_type}, 17, MICROBIT_PIN_P17, MODE_UNUSED};
 const microbit_pin_obj_t microbit_p19_obj = {{&microbit_dig_pin_type}, 19, MICROBIT_PIN_P19, MODE_I2C};
 const microbit_pin_obj_t microbit_p20_obj = {{&microbit_dig_pin_type}, 20, MICROBIT_PIN_P20, MODE_I2C};
 
