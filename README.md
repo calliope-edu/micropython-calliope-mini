@@ -1,10 +1,8 @@
-MicroPython for the BBC micro:bit
-=================================
+MicroPython for the Calliope mini classic
+==========================================
 
-This is the source code for MicroPython running on the BBC micro:bit!
+This is the source code for MicroPython running on the Calliope mini classic (v1.x and v2.x)!
 
-To get involved with the micro:bit community join the Slack channel by signing up here:
-https://tech.microbit.org/get-involved/where-to-find/
 
 Various things are in this repository, including:
 - Source code in source/ and inc/ directories.
@@ -24,7 +22,7 @@ sudo -H pip3 install yotta
 ```
 
 Once all packages are installed run
-`git clone https://github.com/bbcmicrobit/micropython` to get the source code.
+`git clone https://github.com/calliope-edu/micropython-calliope-mini` to get the source code.
 The move to the created directory and use yotta and the provided Makefile to build.
 You might need need an Arm Mbed account to complete some of the yotta commands,
 if so, you could be prompted to create one as a part of the process.
@@ -63,14 +61,14 @@ Upon reset you will have a REPL on the USB CDC serial port, with baudrate
 
 Then try:
 
-    >>> import microbit
-    >>> microbit.display.scroll('hello!')
-    >>> microbit.button_a.is_pressed()
-    >>> dir(microbit)
+    >>> import calliopemini
+    >>> display.scroll('hello!')
+    >>> button_a.is_pressed()
+    >>> dir(calliopemini)
 
 Tab completion works and is very useful!
 
-Read our documentation here:
+Read the microbit documentation here:
 
 https://microbit-micropython.readthedocs.io/en/latest/
 
@@ -80,3 +78,8 @@ from your PC, eg:
     $ ./tools/pyboard.py /dev/ttyACM0 examples/conway.py
 
 Be brave! Break things! Learn and have fun!
+
+Developer Info
+===============
+To make sure everything relevant is newly compiled, it can be necessary to remove the build directory via  
+```rm -r build/bbc-microbit-classic-gcc-nosd/```
