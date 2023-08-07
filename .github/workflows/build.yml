@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Yotta has some issues with Python 3.7+
-      - name: Install Python 3.6
+      - name: Install Python 2.7
         uses: actions/setup-python@v3
         with:
-          python-version: 3.6
+          python-version: 2.7
       - name: Install GNU Arm Embedded Toolchain (arm-none-eabi-gcc)
         uses: carlosperate/arm-none-eabi-gcc-action@v1
         with:
