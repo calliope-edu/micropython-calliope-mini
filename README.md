@@ -1,6 +1,6 @@
 MicroPython for the Calliope mini classic
 ==========================================
- 
+  
 This is the source code for MicroPython running on the Calliope mini classic (v1.x and v2.x)!
 
 
