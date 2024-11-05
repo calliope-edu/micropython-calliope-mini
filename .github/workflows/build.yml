@@ -43,7 +43,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Upload hex file
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: calliopemini-micropython-${{ steps.date.outputs.date }}-${{ github.sha }}.hex
           path: build/firmware.hex
